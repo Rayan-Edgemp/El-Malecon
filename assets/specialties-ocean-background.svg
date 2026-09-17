@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 713" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="ocean-light" cx="34%" cy="18%" r="76%">
+      <stop offset="0" stop-color="#11808a" stop-opacity=".48"/>
+      <stop offset=".58" stop-color="#08717b" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#045d67" stop-opacity=".34"/>
+    </radialGradient>
+    <filter id="canvas-texture" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .026" numOctaves="4" seed="14"/>
+      <feColorMatrix values="
+        .18 0 0 0 .12
+        0 .28 0 0 .18
+        0 0 .3 0 .2
+        0 0 0 .2 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="713" fill="#076b75"/>
+  <rect width="1024" height="713" fill="url(#ocean-light)"/>
+  <rect width="1024" height="713" filter="url(#canvas-texture)" opacity=".34"/>
+
+  <g transform="translate(1030 -80) scale(-.48 .48)" fill="#073f47" opacity=".58">
+    <path d="M46 692c43-196 95-355 174-492l31 18C190 372 151 531 132 700z"/>
+    <path d="M223 222C137 137 66 105 7 126c79 26 144 69 194 129z"/>
+    <path d="M229 213C186 87 128 19 55 8c67 52 116 128 145 229z"/>
+    <path d="M237 211c8-128-20-205-85-232 34 71 48 151 42 239z"/>
+    <path d="M244 215c71-107 142-157 214-148-78 37-145 96-198 177z"/>
+    <path d="M248 222c116-75 210-91 281-49-99 10-187 42-263 96z"/>
+    <path d="M246 230c130-18 222 10 277 84-93-44-185-54-276-30z"/>
+    <path d="M234 230C121 216 39 242-12 307c91-35 169-43 235-23z"/>
+    <ellipse cx="236" cy="221" rx="28" ry="23"/>
+  </g>
+
+  <g transform="translate(1160 115) scale(-.4 .4)" fill="#073f47" opacity=".42">
+    <path d="M46 692c43-196 95-355 174-492l31 18C190 372 151 531 132 700z"/>
+    <path d="M223 222C137 137 66 105 7 126c79 26 144 69 194 129z"/>
+    <path d="M229 213C186 87 128 19 55 8c67 52 116 128 145 229z"/>
+    <path d="M237 211c8-128-20-205-85-232 34 71 48 151 42 239z"/>
+    <path d="M244 215c71-107 142-157 214-148-78 37-145 96-198 177z"/>
+    <path d="M248 222c116-75 210-91 281-49-99 10-187 42-263 96z"/>
+    <path d="M246 230c130-18 222 10 277 84-93-44-185-54-276-30z"/>
+    <ellipse cx="236" cy="221" rx="28" ry="23"/>
+  </g>
+
+  <g fill="none" stroke="#198d96" stroke-width="4" stroke-linecap="round" opacity=".34">
+    <path d="M-28 594C35 561 91 576 143 606s104 40 158 8 101-23 151 11"/>
+    <path d="M-34 614c65-33 122-18 175 13s105 40 160 7 103-23 154 12"/>
+    <path d="M-39 635c66-34 124-18 178 13s107 41 163 7 105-23 157 12"/>
+    <path d="M-44 657c68-35 127-19 182 13s109 42 166 8 107-24 160 12"/>
+    <path d="M-50 680c70-36 130-20 187 13s111 43 169 8 109-24 164 12"/>
+  </g>
+</svg>

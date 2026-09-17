@@ -1,0 +1,71 @@
+/* Duration includes the simulated crash, wall run-up and drainage. */
+.menu-book { --book-wave-time: 2800ms; }
+
+.menu-book-wave {
+  position: absolute;
+  inset: 0;
+  /* The clipped next spread covers the curl only behind its wave boundary.
+     Later wave layers are appended above earlier ones. */
+  z-index: 6;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+}
+
+.menu-book-wave-spread {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+  pointer-events: none;
+}
+
+.menu-book-wave-page {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #f5ead4;
+}
+
+.menu-book-wave-page--left { left: 0; }
+.menu-book-wave-page--right { left: 50%; }
+
+.menu-book-wave-page > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.menu-book-wave-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.menu-book-wave-page--left::after {
+  background: linear-gradient(to left, rgba(10, 32, 36, .19), transparent 4%);
+}
+
+.menu-book-wave-page--right::after {
+  background: linear-gradient(to right, rgba(10, 32, 36, .24), transparent 5%);
+}
+
+.menu-book-wave-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+}
+

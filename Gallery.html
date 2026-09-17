@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | El Malecón Mariscos Bar &amp; Grill</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css?v=gallery-page">
+  <meta name="description" content="Explore El Malecón in Reno: fresh mariscos, Sinaloa-style sushi, colorful cocktails, and a look inside our restaurant.">
+  <link rel="stylesheet" href="gallery.css?v=category-replay">
+</head>
+
+<body class="about-page gallery-page">
+  <header class="site-top">
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a
+      href="https://olo.edgeservpos.com/malecon/"
+      class="header-order"
+      target="_blank"
+      rel="noopener noreferrer"
+    ><span>ORDER</span><span>ONLINE</span></a>
+
+    <div class="logo-bar">
+      <a href="index.html" aria-label="El Malecón homepage">
+        <img
+          src="Images/logo.png"
+          alt="El Malecón Mariscos Bar &amp; Grill"
+          class="site-logo"
+        >
+      </a>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">HOME</a>
+      <a
+        href="https://webmenu.edgeservpos.com/malecon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >MENU</a>
+      <a href="Menu-PDF.html">MENU PDF</a>
+      <a href="About.html">ABOUT</a>
+      <a href="Contact.html">CONTACT</a>
+      <a href="Gallery.html" aria-current="page">GALLERY</a>
+    </nav>
+  </header>
+
+  <div class="menu-overlay" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Close menu">×</button>
+
+    <nav class="overlay-nav" aria-label="Overlay navigation">
+      <a href="index.html">HOME</a>
+      <a
+        href="https://webmenu.edgeservpos.com/malecon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >MENU</a>
+      <a href="Menu-PDF.html">MENU PDF</a>
+      <a href="About.html">ABOUT</a>
+      <a href="Gallery.html" aria-current="page">GALLERY</a>
+      <a href="Contact.html">CONTACT</a>
+    </nav>
+  </div>
+
+  <main class="about-page-main gallery-page-main" id="main-content">
+    <section class="about-page-hero timber-page-hero gallery-page-hero">
+      <p class="about-page-breadcrumb"><a href="index.html">Home</a> / Gallery</p>
+      <h1 class="about-page-title hero-title">Gallery</h1>
+    </section>
+
+    <section class="photo-collection" aria-labelledby="collection-title">
+      <div class="photo-collection-inner">
+        <div class="collection-intro">
+          <div><p class="collection-eyebrow">MARISCOS · SUSHI · BUENOS MOMENTOS</p>
+            <h2 id="collection-title">A taste of El Malecón</h2></div>
+          <p>From the first bite to the last sip.<br>Take a look around our kitchen, our bar, and your next favorite plate.</p>
+        </div>
+        <div class="collection-tools">
+          <div id="gallery-filters" class="photo-filters" role="group" aria-label="Filter gallery photos" hidden>
+            <button type="button" data-filter="all" aria-pressed="true">All photos</button>
+            <button type="button" data-filter="seafood" aria-pressed="false">Mariscos</button>
+            <button type="button" data-filter="sushi" aria-pressed="false">Sushi</button>
+            <button type="button" data-filter="drinks" aria-pressed="false">Drinks</button>
+            <button type="button" data-filter="kitchen" aria-pressed="false">Kitchen favorites</button>
+            <button type="button" data-filter="restaurant" aria-pressed="false">The restaurant</button>
+          </div>
+          <p id="gallery-status" role="status" aria-live="polite">27 photos to explore</p>
+        </div>
+        <div id="photo-grid" class="photo-grid">
+          <figure class="photo-card photo-card--portrait" data-category="sushi">
+            <a class="photo-link" href="assets/gallery/guamuchalito-full.webp" data-title="Guamuchalito" aria-label="View Guamuchalito">
+              <img src="assets/gallery/guamuchalito-card.webp" srcset="assets/gallery/guamuchalito-small.webp 376w, assets/gallery/guamuchalito-card.webp 747w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="747" height="954" alt="Golden sushi rolls with avocado and sauce on a long white plate at the restaurant" loading="eager" decoding="async" fetchpriority="high" style="object-position: 50% 58%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Sinaloa-style sushi</span><h3>Guamuchalito</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="drinks">
+            <a class="photo-link" href="assets/gallery/michelada-vip-full.webp" data-title="Michelada VIP" aria-label="View Michelada VIP">
+              <img src="assets/gallery/michelada-vip-card.webp" srcset="assets/gallery/michelada-vip-small.webp 480w, assets/gallery/michelada-vip-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A chili-rimmed michelada topped with shrimp, citrus and a tamarind straw" loading="eager" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>From the bar</span><h3>Michelada VIP</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/oysters-vip-full.webp" data-title="Oysters VIP" aria-label="View Oysters VIP">
+              <img src="assets/gallery/oysters-vip-card.webp" srcset="assets/gallery/oysters-vip-small.webp 480w, assets/gallery/oysters-vip-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Close-up of oysters topped with diced seafood and vegetables on a white plate" loading="eager" decoding="async" style="object-position: 48% 45%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Oysters VIP</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="restaurant">
+            <a class="photo-link" href="assets/gallery/behind-the-bar-full.webp" data-title="Behind the bar" aria-label="View Behind the bar">
+              <img src="assets/gallery/behind-the-bar-card.webp" srcset="assets/gallery/behind-the-bar-small.webp 480w, assets/gallery/behind-the-bar-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Bartender behind a row of bottles with colorful papel picado overhead" loading="lazy" decoding="async" style="object-position: 42% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>At El Malecón</span><h3>Behind the bar</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/pineapple-ceviche-full.webp" data-title="Pineapple ceviche" aria-label="View Pineapple ceviche">
+              <img src="assets/gallery/pineapple-ceviche-card.webp" srcset="assets/gallery/pineapple-ceviche-small.webp 480w, assets/gallery/pineapple-ceviche-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Seafood and avocado served in a pineapple half on a burgundy wooden table" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Pineapple ceviche</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/seven-mares-full.webp" data-title="7 Mares" aria-label="View 7 Mares">
+              <img src="assets/gallery/seven-mares-card.webp" srcset="assets/gallery/seven-mares-small.webp 480w, assets/gallery/seven-mares-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A bowl of seafood soup topped with crab, shrimp and mussels" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>7 Mares</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="drinks">
+            <a class="photo-link" href="assets/gallery/strawberry-margarita-full.webp" data-title="Strawberry margarita" aria-label="View Strawberry margarita">
+              <img src="assets/gallery/strawberry-margarita-card.webp" srcset="assets/gallery/strawberry-margarita-small.webp 480w, assets/gallery/strawberry-margarita-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A bright red frozen strawberry margarita with a chili rim and citrus garnish" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>From the bar</span><h3>Strawberry margarita</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/camarones-zarandeados-full.webp" data-title="Camarones zarandeados" aria-label="View Camarones zarandeados">
+              <img src="assets/gallery/camarones-zarandeados-card.webp" srcset="assets/gallery/camarones-zarandeados-small.webp 480w, assets/gallery/camarones-zarandeados-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Grilled shrimp with sliced tomatoes, cucumber, red onion and lime" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Camarones zarandeados</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="sushi">
+            <a class="photo-link" href="assets/gallery/munich-sushi-full.webp" data-title="Munich sushi" aria-label="View Munich sushi">
+              <img src="assets/gallery/munich-sushi-card.webp" srcset="assets/gallery/munich-sushi-small.webp 480w, assets/gallery/munich-sushi-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Close-up of a sushi roll with golden topping and sauce against a softly blurred restaurant background" loading="lazy" decoding="async" style="object-position: 62% 52%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Sinaloa-style sushi</span><h3>Munich sushi</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="kitchen">
+            <a class="photo-link" href="assets/gallery/creme-brulee-full.webp" data-title="Crème brûlée" aria-label="View Crème brûlée">
+              <img src="assets/gallery/creme-brulee-card.webp" srcset="assets/gallery/creme-brulee-small.webp 480w, assets/gallery/creme-brulee-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="768" alt="Crème brûlée topped with whipped cream, strawberries and a mint leaf" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Kitchen favorites</span><h3>Crème brûlée</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/malecon-seafood-full.webp" data-title="Malecón" aria-label="View Malecón">
+              <img src="assets/gallery/malecon-seafood-card.webp" srcset="assets/gallery/malecon-seafood-small.webp 480w, assets/gallery/malecon-seafood-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Mixed seafood topped with sliced avocado and sauce on a white plate" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Malecón</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="drinks">
+            <a class="photo-link" href="assets/gallery/cantarito-full.webp" data-title="Cantarito" aria-label="View Cantarito">
+              <img src="assets/gallery/cantarito-card.webp" srcset="assets/gallery/cantarito-small.webp 480w, assets/gallery/cantarito-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A clay cantarito cup filled with a citrus cocktail on a sunlit wooden table" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>From the bar</span><h3>Cantarito</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="kitchen">
+            <a class="photo-link" href="assets/gallery/asada-tacos-full.webp" data-title="Asada tacos" aria-label="View Asada tacos">
+              <img src="assets/gallery/asada-tacos-card.webp" srcset="assets/gallery/asada-tacos-small.webp 480w, assets/gallery/asada-tacos-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Close-up of carne asada tacos topped with onion and cilantro beside a lime wedge" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Kitchen favorites</span><h3>Asada tacos</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/seafood-molcajete-full.webp" data-title="Seafood molcajete" aria-label="View Seafood molcajete">
+              <img src="assets/gallery/seafood-molcajete-card.webp" srcset="assets/gallery/seafood-molcajete-small.webp 480w, assets/gallery/seafood-molcajete-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A black stone molcajete piled with shrimp and mussels on a wooden serving board" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Seafood molcajete</h3></figcaption>
+          </figure>
+          <figure class="photo-card photo-card--portrait" data-category="sushi">
+            <a class="photo-link" href="assets/gallery/crispy-sushi-full.webp" data-title="Crispy sushi" aria-label="View Crispy sushi">
+              <img src="assets/gallery/crispy-sushi-card.webp" srcset="assets/gallery/crispy-sushi-small.webp 433w, assets/gallery/crispy-sushi-card.webp 924w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="924" height="1024" alt="Golden sushi rolls with salmon and avocado, photographed close up at the bar" loading="lazy" decoding="async" style="object-position: 47% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Sinaloa-style sushi</span><h3>Crispy sushi</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="restaurant">
+            <a class="photo-link" href="assets/gallery/inside-el-malecon-full.webp" data-title="A seat at El Malecón" aria-label="View A seat at El Malecón">
+              <img src="assets/gallery/inside-el-malecon-card.webp" srcset="assets/gallery/inside-el-malecon-small.webp 480w, assets/gallery/inside-el-malecon-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Restaurant tables by the front windows beneath colorful hanging banners" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>At El Malecón</span><h3>A seat at El Malecón</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/coctel-de-camaron-full.webp" data-title="Cóctel de camarón" aria-label="View Cóctel de camarón">
+              <img src="assets/gallery/coctel-de-camaron-card.webp" srcset="assets/gallery/coctel-de-camaron-small.webp 480w, assets/gallery/coctel-de-camaron-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Shrimp cocktail in a stemmed glass topped with cucumber and avocado" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Cóctel de camarón</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="drinks">
+            <a class="photo-link" href="assets/gallery/margarita-full.webp" data-title="Margarita" aria-label="View Margarita">
+              <img src="assets/gallery/margarita-card.webp" srcset="assets/gallery/margarita-small.webp 480w, assets/gallery/margarita-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A pale citrus margarita in a stemmed glass with a chili rim and colorful garnishes" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>From the bar</span><h3>Margarita</h3></figcaption>
+          </figure>
+          <figure class="photo-card photo-card--portrait" data-category="sushi">
+            <a class="photo-link" href="assets/gallery/salmoncito-full.webp" data-title="Salmoncito" aria-label="View Salmoncito">
+              <img src="assets/gallery/salmoncito-card.webp" srcset="assets/gallery/salmoncito-small.webp 336w, assets/gallery/salmoncito-card.webp 717w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="717" height="1024" alt="Salmon-topped sushi rolls arranged diagonally on a white plate with sauce" loading="lazy" decoding="async" style="object-position: 50% 56%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Sinaloa-style sushi</span><h3>Salmoncito</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/grilled-octopus-full.webp" data-title="Grilled octopus" aria-label="View Grilled octopus">
+              <img src="assets/gallery/grilled-octopus-card.webp" srcset="assets/gallery/grilled-octopus-small.webp 480w, assets/gallery/grilled-octopus-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="768" alt="Grilled octopus spread across a wooden board with rice, bread, citrus and sauces" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>Grilled octopus</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="seafood">
+            <a class="photo-link" href="assets/gallery/black-pearl-full.webp" data-title="The Black Pearl" aria-label="View The Black Pearl">
+              <img src="assets/gallery/black-pearl-card.webp" srcset="assets/gallery/black-pearl-small.webp 480w, assets/gallery/black-pearl-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A large seafood platter with rows of shrimp, mango and avocado over sliced cucumber" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Mariscos</span><h3>The Black Pearl</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="kitchen">
+            <a class="photo-link" href="assets/gallery/empanadas-full.webp" data-title="Empanadas" aria-label="View Empanadas">
+              <img src="assets/gallery/empanadas-card.webp" srcset="assets/gallery/empanadas-small.webp 480w, assets/gallery/empanadas-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="Golden empanadas with one cut open to show the filling, served with dipping sauces" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Kitchen favorites</span><h3>Empanadas</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="kitchen">
+            <a class="photo-link" href="assets/gallery/shrimp-caesar-salad-full.webp" data-title="Shrimp Caesar salad" aria-label="View Shrimp Caesar salad">
+              <img src="assets/gallery/shrimp-caesar-salad-card.webp" srcset="assets/gallery/shrimp-caesar-salad-small.webp 480w, assets/gallery/shrimp-caesar-salad-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A bowl of salad with grilled shrimp, avocado and strawberries" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Kitchen favorites</span><h3>Shrimp Caesar salad</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="kitchen">
+            <a class="photo-link" href="assets/gallery/turkey-blt-full.webp" data-title="Turkey BLT" aria-label="View Turkey BLT">
+              <img src="assets/gallery/turkey-blt-card.webp" srcset="assets/gallery/turkey-blt-small.webp 480w, assets/gallery/turkey-blt-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A toasted sandwich and fries on a white plate with the restaurant softly blurred behind" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>Kitchen favorites</span><h3>Turkey BLT</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="drinks">
+            <a class="photo-link" href="assets/gallery/cazuela-full.webp" data-title="Cazuela" aria-label="View Cazuela">
+              <img src="assets/gallery/cazuela-card.webp" srcset="assets/gallery/cazuela-small.webp 480w, assets/gallery/cazuela-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A wide clay cocktail bowl filled with citrus slices and cherries" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>From the bar</span><h3>Cazuela</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="drinks">
+            <a class="photo-link" href="assets/gallery/draft-beer-full.webp" data-title="From the tap" aria-label="View From the tap">
+              <img src="assets/gallery/draft-beer-card.webp" srcset="assets/gallery/draft-beer-small.webp 480w, assets/gallery/draft-beer-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A glass of amber draft beer resting on the bar beside the front window" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>From the bar</span><h3>From the tap</h3></figcaption>
+          </figure>
+          <figure class="photo-card" data-category="restaurant">
+            <a class="photo-link" href="assets/gallery/from-the-kitchen-full.webp" data-title="Fresh from the kitchen" aria-label="View Fresh from the kitchen">
+              <img src="assets/gallery/from-the-kitchen-card.webp" srcset="assets/gallery/from-the-kitchen-small.webp 480w, assets/gallery/from-the-kitchen-card.webp 1024w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 80px) / 2), 460px" width="1024" height="683" alt="A steaming molcajete with shrimp, vegetables and meat being prepared in the kitchen" loading="lazy" decoding="async" style="object-position: 50% 50%">
+              <span class="photo-open" aria-hidden="true">↗</span>
+            </a>
+            <figcaption><span>At El Malecón</span><h3>Fresh from the kitchen</h3></figcaption>
+          </figure>
+        </div>
+        <p class="collection-note">See something you like? Tap a photo for a closer look.</p>
+      </div>
+    </section>
+
+    <div class="menu-gallery-rope" aria-hidden="true"><div class="nautical-rule"><span></span><img src="assets/anchor.svg" alt=""><span></span></div></div>
+    <section class="gallery-invitation" aria-labelledby="invitation-title">
+      <p class="collection-eyebrow">THERE’S A PLACE FOR YOU HERE</p>
+      <h2 id="invitation-title">Looks good? Tastes even better.</h2>
+      <p>Come see us on Sierra Street in Reno.</p>
+      <div class="invitation-links"><a href="Menu-PDF.html">Explore the menu <span aria-hidden="true">↗</span></a><a href="Contact.html">Plan your visit <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <dialog id="photo-viewer" aria-label="Gallery photo viewer" aria-describedby="viewer-caption">
+    <button id="viewer-close" type="button" aria-label="Close photo viewer">×</button>
+    <div class="viewer-stage"><img id="viewer-image" alt=""></div>
+    <div class="viewer-bottom">
+      <button id="viewer-prev" type="button" aria-label="Previous photo">←</button>
+      <div class="viewer-details" aria-live="polite" aria-atomic="true"><h2 id="viewer-caption"></h2><p id="viewer-counter"></p></div>
+      <button id="viewer-next" type="button" aria-label="Next photo">→</button>
+    </div>
+  </dialog>
+  
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="index.html" class="footer-logo-link" aria-label="El Malecón home">
+          <img
+            src="Images/logo.png"
+            alt="El Malecón Mariscos Bar &amp; Grill"
+            class="footer-logo"
+          >
+        </a>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">HOME</a>
+          <a
+            href="https://webmenu.edgeservpos.com/malecon/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >MENU</a>
+          <a href="Menu-PDF.html">MENU PDF</a>
+          <a href="About.html">ABOUT</a>
+          <a href="Gallery.html" aria-current="page">GALLERY</a>
+          <a href="Contact.html">CONTACT</a>
+        </nav>
+      </div>
+
+      <div class="footer-details">
+        <a class="footer-phone" href="tel:+17752843300">(775)284-3300</a>
+
+        <p class="footer-address">135 N SIERRA ST STE E RENO, NV, 89501</p>
+
+        <div class="footer-hours">
+          <p>SUNDAY - WEDNESDAY: 11:00AM - 10:00PM</p>
+          <p>THURSDAY &amp; SATURDAY: 11:00AM - 12:00AM</p>
+        </div>
+
+        <a
+          href="https://olo.edgeservpos.com/malecon/"
+          class="footer-order"
+          target="_blank"
+          rel="noopener noreferrer"
+        >ORDER ONLINE</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>COPYRIGHT 2026 ALL RIGHT RESERVED</p>
+        <p>POWERED BY <span>EDGE COMMERCE.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=water-buttons-touch"></script>
+  <script src="gallery.js?v=category-replay"></script>
+</body>
+</html>

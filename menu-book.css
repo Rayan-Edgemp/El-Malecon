@@ -1,0 +1,246 @@
+/* Keep the oversized curl canvas from creating a second vertical scrollbar.
+   Preserve the original formatting context so the hero margin stays contained. */
+.menu-pdf-page .menu-pdf-main {
+  display: flow-root;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.menu-book {
+  --book-opening-time: 1150ms;
+  --book-wave-time: 2300ms;
+  position: relative;
+  padding: 10px 0 4px;
+  outline: none;
+}
+
+.menu-book-layout {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr) 68px;
+  align-items: center;
+  gap: clamp(18px, 3vw, 44px);
+}
+
+.menu-book-stage {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-width: calc((100svh - 180px) * 1.214286);
+  aspect-ratio: 34 / 28;
+  justify-self: center;
+  perspective: 2200px;
+  perspective-origin: 50% 45%;
+  touch-action: pan-y pinch-zoom;
+}
+.menu-book-prev { grid-column: 1; grid-row: 1; }
+.menu-book-next { grid-column: 3; grid-row: 1; }
+.menu-book:focus-visible { outline: 2px solid #b58b4a; outline-offset: 10px; }
+
+.menu-book-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateX(-25%);
+}
+
+.menu-book-page,
+.menu-book-face {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #f5ead4;
+  box-shadow: 0 12px 24px rgba(26, 40, 36, .19), 0 1px 3px rgba(26, 40, 36, .18);
+  cursor: zoom-in;
+}
+
+.menu-book-page img,
+.menu-book-face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.menu-book-page--left { left: 0; }
+.menu-book-page--right { left: 50%; }
+
+.menu-book-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.menu-book-page--left::after {
+  background: linear-gradient(to left, rgba(10, 32, 36, .19), transparent 4%);
+}
+
+.menu-book-page--right::after {
+  background: linear-gradient(to right, rgba(10, 32, 36, .24), transparent 5%);
+}
+
+.menu-book-leaf {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  z-index: 3;
+}
+
+.menu-book-face {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.menu-book-face--front { transform: rotateY(0deg) translateZ(.1px); }
+.menu-book-face--back { transform: rotateY(180deg) translateZ(.1px); }
+
+.menu-book-canvas {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.menu-book[data-view="cover"] .menu-book-page { visibility: hidden; }
+.menu-book[data-view="spread"] .menu-book-track,
+.menu-book[data-view="last"] .menu-book-track { transform: none; }
+.menu-book[data-view="spread"] .menu-book-leaf,
+.menu-book[data-view="last"] .menu-book-leaf { display: none; }
+.menu-book[data-view="last"] .menu-book-page--left { left: 25%; }
+.menu-book[data-view="last"] .menu-book-page--left::after { content: none; }
+.menu-book[data-view="last"] .menu-book-page--right { display: none; }
+
+/* A stationary page sits beneath the one continuous turning sheet. */
+.menu-book.is-turning .menu-book-canvas.is-active { display: block; }
+.menu-book.is-paper-wave .menu-book-wave { visibility: hidden; }
+.menu-book.is-turning.is-paper-wave[data-turn] .menu-book-page { visibility: hidden; }
+.menu-book-paper-water {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+.menu-book.is-turning .menu-book-leaf { visibility: hidden; }
+.menu-book.is-turning[data-turn="front"] .menu-book-page--left { visibility: hidden; }
+.menu-book.is-turning[data-turn="front"] .menu-book-page--right {
+  display: block;
+  visibility: visible;
+}
+.menu-book.is-turning[data-turn="back"] .menu-book-page--right { visibility: hidden; }
+.menu-book.is-turning[data-turn="back"] .menu-book-page--left {
+  display: block;
+  visibility: visible;
+  left: 0;
+}
+.menu-book.is-turning[data-turn="back"] .menu-book-page--left::after { content: ""; }
+.menu-book.is-turning a,
+.menu-book.is-waving a { pointer-events: none; }
+
+.menu-book .menu-book-arrow {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  justify-self: center;
+  border: 2px solid #b58b4a;
+  border-radius: 50%;
+  background: #075965;
+  color: #fff9e8;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.menu-book .menu-book-arrow:hover,
+.menu-book .menu-book-arrow.is-water-active { background: #075965; }
+.menu-book .menu-book-arrow[aria-disabled="true"] {
+  opacity: .24;
+  cursor: default;
+}
+.menu-book .menu-book-arrow[aria-disabled="true"]::after { opacity: 0; }
+.menu-book .menu-book-arrow:focus-visible,
+.menu-book a:focus-visible {
+  outline: 3px solid #e66042;
+  outline-offset: 6px;
+}
+
+.menu-book-meta { margin: 26px 0 0; text-align: center; }
+.menu-book-status {
+  margin: 0;
+  color: #075965;
+  font-size: 1rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.menu-book-hint {
+  margin: 7px 0 0;
+  color: #686152;
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.menu-book-noscript { margin: 25px 0 0; text-align: center; }
+.menu-book-noscript a { color: #075965; text-decoration: underline; }
+
+/* Fit the open menu beneath the compact navigation without stretching its pages. */
+.menu-pdf-page { --book-nav-height: 68px; }
+@media (max-width: 820px) {
+  .menu-pdf-page { --book-nav-height: 104px; }
+}
+
+@media (min-width: 681px) {
+  .menu-pdf-page .menu-pdf-section {
+    width: min(calc(100% - 4vw), max(1320px, calc((100svh - var(--book-nav-height) - 24px) * 1.214286 + 192px)));
+    padding-inline: 24px;
+    padding-bottom: 0;
+  }
+  .menu-book {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .menu-book-layout {
+    grid-template-columns: 60px minmax(0, 1fr) 60px;
+    gap: 12px;
+  }
+  .menu-book-stage {
+    max-width: calc((100svh - var(--book-nav-height) - 24px) * 1.214286);
+    scroll-margin-top: var(--book-nav-height);
+  }
+  .menu-book-meta {
+    order: -1;
+    margin: 0 0 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .menu-pdf-page .menu-pdf-section { padding: 24px 14px; }
+  .menu-book-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 30px;
+  }
+  .menu-book-stage {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    max-width: none;
+  }
+  .menu-book .menu-book-arrow { width: 48px; height: 48px; }
+  .menu-book-prev { grid-column: 1; grid-row: 2; justify-self: end !important; }
+  .menu-book-next { grid-column: 2; grid-row: 2; justify-self: start !important; }
+  .menu-book-meta { margin-top: 18px; }
+  .menu-book-status { font-size: .9rem; }
+  .menu-book-hint { font-size: .86rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-book.is-turning .menu-book-canvas.is-active { display: none; }
+}

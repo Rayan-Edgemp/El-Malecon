@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <g fill="none" stroke="#064B55" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="120" cy="120" r="91" stroke-width="3"/>
+    <circle cx="120" cy="120" r="74" stroke-width="2" stroke-dasharray="3 8"/>
+    <path d="M120 10v22M120 208v22M10 120h22M208 120h22" stroke-width="5"/>
+    <path d="m120 45 12 63 63 12-63 12-12 63-12-63-63-12 63-12z" stroke-width="4"/>
+  </g>
+  <path fill="#E45D43" d="m120 45 12 63-12 12-12-12z"/>
+  <path fill="#F0AF32" d="m120 195-12-63 12-12 12 12z"/>
+  <circle cx="120" cy="120" r="7" fill="#F7F0DD" stroke="#064B55" stroke-width="4"/>
+  <g fill="#064B55" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="120" y="26">N</text>
+    <text x="120" y="232">S</text>
+    <text x="19" y="126">W</text>
+    <text x="221" y="126">E</text>
+  </g>
+</svg>
